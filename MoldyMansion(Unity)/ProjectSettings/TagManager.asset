@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - RoomDetector
+  - Walls
+  - Blob
+  - Mold
+  - Bubble
+  - Boss
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - LeaveFrame
+  - PlayerFrameSensor
+  - Enemy
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 321466749
+    locked: 0
+  - name: Objects
+    uniqueID: 4032394601
+    locked: 0
+  - name: Walls
+    uniqueID: 1181325897
+    locked: 0
+  - name: Entites
+    uniqueID: 1372627991
+    locked: 0
+  - name: Entrances
+    uniqueID: 12401429
+    locked: 0
