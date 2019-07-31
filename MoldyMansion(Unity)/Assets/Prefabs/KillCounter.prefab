@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killCount: 0
-  score: {fileID: 1416707312872980754, guid: 548b99fced1f4de448d50b2e55622466, type: 3}
+  score: {fileID: 0}
+  WinScore: {fileID: 0}

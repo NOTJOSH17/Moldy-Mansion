@@ -7,8 +7,9 @@ public class KillCount : MonoBehaviour
 {
     public int killCount;
 
-    public static int scoreValue = 0;
+    public int scoreValue = 0;
     public Text score; 
+    public Text WinScore;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class KillCount : MonoBehaviour
     void Update()
     {
         score.text = "$" + scoreValue + ".00";
+        WinScore.text = "$" + scoreValue + ".00";
     }
     public void CounterMoldMan()
     {

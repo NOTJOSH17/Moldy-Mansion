@@ -10,7 +10,8 @@ public class Weapon : MonoBehaviour {
 	public GameObject bulletPrefab;
 	public float Soap;
     float maxSoap = 500;
-    float UseSoap = 2f;
+    float UseSoap = 6f;
+
     public Image SoapBar;
 	bool gunOn;
 	public AudioSource SoapSound;
@@ -23,7 +24,6 @@ public class Weapon : MonoBehaviour {
 
 	void Update () 
 	{
-		Soap += 1f;
 		if(Soap >= maxSoap)
 		{
 			Soap = maxSoap;
@@ -38,6 +38,14 @@ public class Weapon : MonoBehaviour {
 				Soap -= UseSoap;
 			}
 		}
+		if(gunOn == true)
+		{
+			Soap += 5.5f;
+		}
+		else if(gunOn == false)
+		{
+			Soap += 1.5f;
+		}
         if (Soap <= 0)
         {
             Debug.Log("lowsoap");
@@ -46,7 +54,6 @@ public class Weapon : MonoBehaviour {
         }
 		if (gunOn == false)
 		{
-			Soap += 1;
 			if(Soap >= maxSoap)
 			{
 				gunOn = true;

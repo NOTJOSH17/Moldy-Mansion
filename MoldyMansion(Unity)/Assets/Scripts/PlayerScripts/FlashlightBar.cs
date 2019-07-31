@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FlashlightBar : MonoBehaviour
 {
     public float bLife;
-	float maxBLife = 100f;
+	float maxBLife = 500f;
     public bool lightOn;
 	public Image barImage;
     public GameObject Flash;
@@ -49,7 +49,7 @@ public class FlashlightBar : MonoBehaviour
     }
     public void AddBLife()
     {
-        bLife += 50;
+        bLife += 100;
         if(bLife >= maxBLife)
         {
             bLife = maxBLife;

@@ -9,7 +9,9 @@ public class Pause : MonoBehaviour
     public GameObject GameCanvas;
     public GameObject GameOverCanvas;
     public GameObject Sounds;
-    public AudioSource GameOverSong;
+    public AudioSource LevelSong;
+    public GameObject Player;
+    public GameObject Level;
     bool isPaused;
     int pressCounter;
 
@@ -18,11 +20,11 @@ public class Pause : MonoBehaviour
     {
         isPaused = false;
         pressCounter = 0;
+        LevelSong.Play();
     }
 
     void Update()
     {
-        Debug.Log(pressCounter);
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             pressCounter ++;
@@ -43,6 +45,11 @@ public class Pause : MonoBehaviour
         if(isPaused == true)
         {
             PauseGame();
+            LevelSong.Pause();
+        }
+        else
+        {
+            LevelSong.UnPause();
         }
         if (isPaused == false)
         {
@@ -52,7 +59,9 @@ public class Pause : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(1); //more efficent than above 
+        
     }
     public void QuitGame()
     {
@@ -62,12 +71,17 @@ public class Pause : MonoBehaviour
     
     public void PauseGame()
     {
+        Player.SetActive(false);
+        Level.SetActive(false);
         Sounds.SetActive(false);
         GameCanvas.SetActive(false);
         GameOverCanvas.SetActive(true);
+        
     }
     public void UnPauseGame()
     {
+        Player.SetActive(true);
+        Level.SetActive(true);
         Sounds.SetActive(true);
         GameCanvas.SetActive(true);
         GameOverCanvas.SetActive(false);
